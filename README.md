@@ -1,1 +1,1 @@
-# kotlin-lib-chekout-sdk
+# kotlin-lib-checkout-sdk

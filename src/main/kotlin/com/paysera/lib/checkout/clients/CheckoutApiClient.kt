@@ -1,6 +1,6 @@
 package com.paysera.lib.checkout.clients
 
-import com.paysera.lib.checkout.entities.PaymentTypeResponse
+import com.paysera.lib.checkout.entities.PSPaymentTypes
 import com.paysera.lib.checkout.entities.PaymentUrl
 import com.paysera.lib.checkout.retrofit.NetworkApiClient
 import com.paysera.lib.common.retrofit.ApiRequestManager
@@ -12,25 +12,25 @@ class CheckoutApiClient(
     apiRequestManager: ApiRequestManager
 ) : BaseApiClient(apiRequestManager) {
 
-    fun getPaymentTypes(country: String, currency: String): Deferred<PaymentTypeResponse> {
+    fun getPaymentTypes(country: String, currency: String): Deferred<PSPaymentTypes> {
         return networkApiClient.getPaymentTypes(country, currency)
     }
 
     fun getPaymentUrl(
-        paymentTypeId: String,
+        paymentTypeKey: String,
         amount: String,
         currency: String,
         account: String,
         email: String,
-        lang: String
+        locale: String
     ): Deferred<PaymentUrl> {
         return networkApiClient.getPaymentUrl(
-            paymentTypeId = paymentTypeId,
+            paymentTypeKey = paymentTypeKey,
             amount = amount,
             currency = currency,
             account = account,
             email = email,
-            lang = lang
+            locale = locale
         )
     }
 }

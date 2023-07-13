@@ -1,7 +1,7 @@
 package com.paysera.lib.checkout.retrofit
 
 import com.paysera.lib.checkout.entities.PSPaymentTypes
-import com.paysera.lib.checkout.entities.PaymentUrl
+import com.paysera.lib.checkout.entities.PSPaymentUrl
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -23,5 +23,5 @@ interface NetworkApiClient {
         @Query("account") account: String,
         @Query("email") email: String,
         @Query("lang") locale: String
-    ): Deferred<PaymentUrl>
+    ): Deferred<PSPaymentUrl>
 }

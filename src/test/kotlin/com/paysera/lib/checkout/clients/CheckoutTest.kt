@@ -1,6 +1,6 @@
 package com.paysera.lib.checkout.clients
 
-import com.paysera.lib.checkout.entities.SPPaymentUrlRequest
+import com.paysera.lib.checkout.entities.PSPaymentUrlRequest
 import com.paysera.lib.checkout.runCatchingBlocking
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
@@ -10,7 +10,7 @@ internal class CheckoutTest : BaseTest() {
     private val country = "lt"
     private val currency = "EUR"
 
-    private val paymentUrlRequest = SPPaymentUrlRequest(
+    private val paymentUrlRequest = PSPaymentUrlRequest(
         paymentTypeKey = "quipu",
         amount = "100",//cents
         currency = currency,

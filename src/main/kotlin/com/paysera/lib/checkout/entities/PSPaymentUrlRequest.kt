@@ -1,6 +1,6 @@
 package com.paysera.lib.checkout.entities
 
-data class SPPaymentUrlRequest(
+data class PSPaymentUrlRequest(
     val paymentTypeKey: String,
     val amount: String,
     val currency: String,

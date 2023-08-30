@@ -5,6 +5,5 @@ data class PSPaymentUrlRequest(
     val amount: String,
     val currency: String,
     val account: String,
-    val email: String,
-    val locale: String
+    val email: String
 )

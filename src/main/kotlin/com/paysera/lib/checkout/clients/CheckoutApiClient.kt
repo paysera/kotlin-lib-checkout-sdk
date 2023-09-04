@@ -18,7 +18,7 @@ class CheckoutApiClient(
         return networkApiClient.getPaymentTypes(
             filter.country,
             filter.currency,
-            filter.group
+            filter.group?.value
         )
     }
 

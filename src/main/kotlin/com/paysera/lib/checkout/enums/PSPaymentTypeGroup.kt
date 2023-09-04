@@ -1,4 +1,4 @@
-package com.paysera.lib.checkout.entities
+package com.paysera.lib.checkout.enums
 
 enum class PSPaymentTypeGroup(val value: String) {
     EBanking("e-banking"),

@@ -2,6 +2,7 @@ package com.paysera.lib.checkout.clients
 
 import com.paysera.lib.checkout.entities.PSPaymentTypesFilter
 import com.paysera.lib.checkout.entities.PSPaymentUrlRequest
+import com.paysera.lib.checkout.enums.PSPaymentTypeGroup
 import com.paysera.lib.checkout.runCatchingBlocking
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
@@ -12,7 +13,7 @@ internal class CheckoutTest : BaseTest() {
     private val paymentTypesFilter = PSPaymentTypesFilter(
         country = null,
         currency = null,
-        group = "credit-cards"
+        group = PSPaymentTypeGroup.CreditCards
     )
 
     private val paymentUrlRequest = PSPaymentUrlRequest(

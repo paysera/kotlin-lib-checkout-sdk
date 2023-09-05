@@ -13,15 +13,15 @@ interface NetworkApiClient {
     fun getPaymentTypes(
         @Query("country") country: String?,
         @Query("currency") currency: String?,
-        @Query("group") group: String?,
+        @Query("group") group: String?
     ): Deferred<PSPaymentTypes>
 
     @GET("payment-url/{paymentTypeKey}")
     fun getPaymentUrl(
         @Path("paymentTypeKey") paymentTypeKey: String,
-        @Query("amount") amount: String,
+        @Query("amount") amountInCents: String,
         @Query("currency") currency: String,
-        @Query("account") account: String,
+        @Query("account") evpAccountNumber: String,
         @Query("email") email: String
     ): Deferred<PSPaymentUrl>
 }

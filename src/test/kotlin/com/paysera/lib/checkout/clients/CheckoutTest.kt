@@ -2,7 +2,7 @@ package com.paysera.lib.checkout.clients
 
 import com.paysera.lib.checkout.entities.PSPaymentTypesFilter
 import com.paysera.lib.checkout.entities.PSPaymentUrlRequest
-import com.paysera.lib.checkout.enums.PSPaymentTypeGroup
+import com.paysera.lib.checkout.enums.PSPaymentGroupType
 import com.paysera.lib.checkout.runCatchingBlocking
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
@@ -13,14 +13,14 @@ internal class CheckoutTest : BaseTest() {
     private val paymentTypesFilter = PSPaymentTypesFilter(
         country = null,
         currency = null,
-        group = PSPaymentTypeGroup.CreditCards
+        group = PSPaymentGroupType.CreditCards
     )
 
     private val paymentUrlRequest = PSPaymentUrlRequest(
         paymentTypeKey = "quipu",
-        amount = "100",//cents
+        amountInCents = "100",
         currency = "EUR",
-        account = "", //evp-id
+        evpAccountNumber = "",
         email = ""
     )
 

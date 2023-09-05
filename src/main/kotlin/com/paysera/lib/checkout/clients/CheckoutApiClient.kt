@@ -25,9 +25,9 @@ class CheckoutApiClient(
     fun getPaymentUrl(paymentUrlRequest: PSPaymentUrlRequest): Deferred<PSPaymentUrl> {
         return networkApiClient.getPaymentUrl(
             paymentTypeKey = paymentUrlRequest.paymentTypeKey,
-            amount = paymentUrlRequest.amount,
+            amountInCents = paymentUrlRequest.amountInCents,
             currency = paymentUrlRequest.currency,
-            account = paymentUrlRequest.account,
+            evpAccountNumber = paymentUrlRequest.evpAccountNumber,
             email = paymentUrlRequest.email
         )
     }

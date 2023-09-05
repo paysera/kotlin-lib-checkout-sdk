@@ -4,6 +4,7 @@ import com.paysera.lib.checkout.entities.PSPaymentTypesFilter
 import com.paysera.lib.checkout.entities.PSPaymentUrlRequest
 import com.paysera.lib.checkout.enums.PSPaymentGroupType
 import com.paysera.lib.checkout.runCatchingBlocking
+import org.joda.money.CurrencyUnit
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 
@@ -19,7 +20,7 @@ internal class CheckoutTest : BaseTest() {
     private val paymentUrlRequest = PSPaymentUrlRequest(
         paymentTypeKey = "quipu",
         amountInCents = "100",
-        currency = "EUR",
+        currencyUnit = CurrencyUnit.EUR,
         evpAccountNumber = "",
         email = ""
     )

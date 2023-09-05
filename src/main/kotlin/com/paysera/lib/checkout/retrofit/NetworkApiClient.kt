@@ -20,7 +20,7 @@ interface NetworkApiClient {
     fun getPaymentUrl(
         @Path("paymentTypeKey") paymentTypeKey: String,
         @Query("amount") amountInCents: String,
-        @Query("currency") currency: String,
+        @Query("currency") currencyUnit: String,
         @Query("account") evpAccountNumber: String,
         @Query("email") email: String
     ): Deferred<PSPaymentUrl>

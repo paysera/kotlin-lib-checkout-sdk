@@ -26,7 +26,7 @@ class CheckoutApiClient(
         return networkApiClient.getPaymentUrl(
             paymentTypeKey = paymentUrlRequest.paymentTypeKey,
             amountInCents = paymentUrlRequest.amountInCents,
-            currency = paymentUrlRequest.currency,
+            currencyUnit = paymentUrlRequest.currencyUnit.currencyCode,
             evpAccountNumber = paymentUrlRequest.evpAccountNumber,
             email = paymentUrlRequest.email
         )
